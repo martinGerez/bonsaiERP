@@ -1,3 +1,29 @@
+# == Schema Information
+#
+# Table name: attachments
+#
+#  id               :integer          not null, primary key
+#  attachable_type  :string
+#  attachment_uid   :string
+#  image            :boolean          default(FALSE)
+#  image_attributes :json
+#  name             :string
+#  position         :integer          default(0)
+#  publish          :boolean          default(FALSE)
+#  size             :integer
+#  created_at       :datetime
+#  updated_at       :datetime
+#  attachable_id    :integer
+#  user_id          :integer
+#
+# Indexes
+#
+#  index_attachments_on_attachable_id_and_attachable_type  (attachable_id,attachable_type)
+#  index_attachments_on_image                              (image)
+#  index_attachments_on_publish                            (publish)
+#  index_attachments_on_user_id                            (user_id)
+#
+
 class Attachment < ActiveRecord::Base
   belongs_to :attachable, polymorphic: true
   belongs_to :user

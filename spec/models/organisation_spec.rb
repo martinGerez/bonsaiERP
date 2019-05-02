@@ -1,4 +1,36 @@
 # encoding: utf-8
+
+# == Schema Information
+#
+# Table name: common.organisations
+#
+#  id               :integer          not null, primary key
+#  address          :string
+#  address_alt      :string
+#  country_code     :string(5)
+#  currency         :string(10)
+#  due_date         :date
+#  due_on           :date
+#  email            :string
+#  header_css       :string
+#  inventory        :boolean
+#  inventory_active :boolean          default(TRUE)
+#  mobile           :string(40)
+#  name             :string(100)
+#  phone            :string(40)
+#  phone_alt        :string(40)
+#  plan             :string           default("2users")
+#  preferences      :text
+#  settings         :jsonb
+#  tenant           :string(50)
+#  time_zone        :string(100)
+#  website          :string
+#  created_at       :datetime
+#  updated_at       :datetime
+#  country_id       :integer
+#  user_id          :integer
+#
+
 require 'spec_helper'
 #require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 

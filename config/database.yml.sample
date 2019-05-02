@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: bonsai # Example
+  password: bonsai # Example
+  host: localhost
+
+development:
+  <<: *default
+  database: bonsaierp_development
+
+test:
+  <<: *default
+  database: bonsaierp_test

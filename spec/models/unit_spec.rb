@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: units
+#
+#  id         :integer          not null, primary key
+#  integer    :boolean          default(FALSE)
+#  name       :string(100)
+#  symbol     :string(20)
+#  visible    :boolean          default(TRUE)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 #require 'spec_helper'
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 

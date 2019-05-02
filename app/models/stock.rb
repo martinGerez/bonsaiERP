@@ -1,4 +1,30 @@
 # encoding: utf-8
+
+# == Schema Information
+#
+# Table name: stocks
+#
+#  id           :integer          not null, primary key
+#  active       :boolean          default(TRUE)
+#  minimum      :decimal(14, 2)   default(0.0)
+#  quantity     :decimal(14, 2)   default(0.0)
+#  unitary_cost :decimal(14, 2)   default(0.0)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  item_id      :integer
+#  store_id     :integer
+#  user_id      :integer
+#
+# Indexes
+#
+#  index_stocks_on_active    (active)
+#  index_stocks_on_item_id   (item_id)
+#  index_stocks_on_minimum   (minimum)
+#  index_stocks_on_quantity  (quantity)
+#  index_stocks_on_store_id  (store_id)
+#  index_stocks_on_user_id   (user_id)
+#
+
 # author: Boris Barroso
 # email: boriscyber@gmail.com
 class Stock < ActiveRecord::Base

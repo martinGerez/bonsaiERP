@@ -9,7 +9,7 @@ gem 'coffee-rails' , '~> 4.0.1'
 gem 'uglifier' , '>= 2.7.0'
 
 gem 'compass-rails', '~> 2.0.4'
-gem 'pg' # Postgresql adapter
+gem 'pg', '~> 0.18.0'
 gem 'virtus' # Model generation in simple way
 #gem 'squeel' # Better SQL queries
 
@@ -20,6 +20,7 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'active_model_serializers' # ActiveRecord Classes to encode in JSON
 gem 'resubject' # Cool presenter
 
+gem 'annotate'
 gem 'validates_email_format_of'#, '~> 1.5.3'
 gem 'validates_lengths_from_database'
 # Hstore accessor
@@ -65,9 +66,10 @@ end
 group :test do
   gem "capybara"
   gem "database_cleaner"
-  gem "factory_girl_rails"#, '~> 4.4.1'
+  gem "factory_girl_rails"
   gem "shoulda-matchers", require: false
   gem "valid_attribute"
   gem "watchr"
   gem "launchy"
+  gem "simplecov", require: false
 end

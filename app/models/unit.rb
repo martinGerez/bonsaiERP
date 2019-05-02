@@ -1,4 +1,18 @@
 # encoding: utf-8
+
+# == Schema Information
+#
+# Table name: units
+#
+#  id         :integer          not null, primary key
+#  integer    :boolean          default(FALSE)
+#  name       :string(100)
+#  symbol     :string(20)
+#  visible    :boolean          default(TRUE)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 # author: Boris Barroso
 # email: boriscyber@gmail.com
 class Unit < ActiveRecord::Base

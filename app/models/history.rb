@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: histories
+#
+#  id               :integer          not null, primary key
+#  all_data         :json
+#  extras           :hstore
+#  historiable_type :string
+#  history_data     :json
+#  klass_type       :string
+#  new_item         :boolean          default(FALSE)
+#  created_at       :datetime
+#  historiable_id   :integer
+#  user_id          :integer
+#
+# Indexes
+#
+#  index_histories_on_created_at                           (created_at)
+#  index_histories_on_historiable_id_and_historiable_type  (historiable_id,historiable_type)
+#  index_histories_on_user_id                              (user_id)
+#
+
 class History < ActiveRecord::Base
 
   # Relationships

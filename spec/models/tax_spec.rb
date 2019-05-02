@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: taxes
+#
+#  id          :integer          not null, primary key
+#  abreviation :string(20)
+#  name        :string(100)
+#  percentage  :decimal(5, 2)    default(0.0)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 require 'spec_helper'
 
 describe Tax do

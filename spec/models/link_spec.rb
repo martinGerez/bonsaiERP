@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: common.links
+#
+#  id              :integer          not null, primary key
+#  active          :boolean          default(TRUE)
+#  api_token       :string
+#  creator         :boolean          default(FALSE)
+#  master_account  :boolean          default(FALSE)
+#  role            :string(50)
+#  settings        :string
+#  tenant          :string(100)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  organisation_id :integer
+#  user_id         :integer
+#
+
 require 'spec_helper'
 
 describe Link do

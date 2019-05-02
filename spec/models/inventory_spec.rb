@@ -1,4 +1,41 @@
 # encoding: utf-8
+
+# == Schema Information
+#
+# Table name: inventories
+#
+#  id              :integer          not null, primary key
+#  date            :date
+#  description     :string
+#  error_messages  :string
+#  has_error       :boolean          default(FALSE)
+#  operation       :string(10)
+#  ref_number      :string
+#  total           :decimal(14, 2)   default(0.0)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  account_id      :integer
+#  contact_id      :integer
+#  creator_id      :integer
+#  project_id      :integer
+#  store_id        :integer
+#  store_to_id     :integer
+#  transference_id :integer
+#  updater_id      :integer
+#
+# Indexes
+#
+#  index_inventories_on_account_id  (account_id)
+#  index_inventories_on_contact_id  (contact_id)
+#  index_inventories_on_date        (date)
+#  index_inventories_on_has_error   (has_error)
+#  index_inventories_on_operation   (operation)
+#  index_inventories_on_project_id  (project_id)
+#  index_inventories_on_ref_number  (ref_number)
+#  index_inventories_on_store_id    (store_id)
+#  index_inventories_on_updater_id  (updater_id)
+#
+
 require 'spec_helper'
 
 describe Inventory do

@@ -1,4 +1,52 @@
 # encoding: utf-8
+
+# == Schema Information
+#
+# Table name: account_ledgers
+#
+#  id                 :integer          not null, primary key
+#  account_balance    :decimal(14, 2)   default(0.0)
+#  account_to_balance :decimal(14, 2)   default(0.0)
+#  amount             :decimal(14, 2)   default(0.0)
+#  approver_datetime  :datetime
+#  currency           :string
+#  date               :date
+#  error_messages     :string
+#  exchange_rate      :decimal(14, 4)   default(1.0)
+#  has_error          :boolean          default(FALSE)
+#  inverse            :boolean          default(FALSE)
+#  name               :string
+#  nuller_datetime    :datetime
+#  operation          :string(20)
+#  reference          :text
+#  status             :string(50)       default("approved")
+#  created_at         :datetime
+#  updated_at         :datetime
+#  account_id         :integer
+#  account_to_id      :integer
+#  approver_id        :integer
+#  contact_id         :integer
+#  creator_id         :integer
+#  nuller_id          :integer
+#  project_id         :integer
+#  updater_id         :integer
+#
+# Indexes
+#
+#  index_account_ledgers_on_account_id     (account_id)
+#  index_account_ledgers_on_account_to_id  (account_to_id)
+#  index_account_ledgers_on_contact_id     (contact_id)
+#  index_account_ledgers_on_currency       (currency)
+#  index_account_ledgers_on_date           (date)
+#  index_account_ledgers_on_has_error      (has_error)
+#  index_account_ledgers_on_name           (name) UNIQUE
+#  index_account_ledgers_on_operation      (operation)
+#  index_account_ledgers_on_project_id     (project_id)
+#  index_account_ledgers_on_reference      (reference) USING gin
+#  index_account_ledgers_on_status         (status)
+#  index_account_ledgers_on_updater_id     (updater_id)
+#
+
 require 'spec_helper'
 
 describe AccountLedger do

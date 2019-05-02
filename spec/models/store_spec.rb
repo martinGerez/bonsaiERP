@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: stores
+#
+#  id          :integer          not null, primary key
+#  active      :boolean          default(TRUE)
+#  address     :string
+#  description :string
+#  name        :string
+#  phone       :string(40)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 require 'spec_helper'
 
 describe Store do

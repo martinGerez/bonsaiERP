@@ -1,3 +1,36 @@
+# == Schema Information
+#
+# Table name: common.users
+#
+#  id                      :integer          not null, primary key
+#  active                  :boolean          default(TRUE)
+#  address                 :string
+#  auth_token              :string
+#  change_default_password :boolean          default(FALSE)
+#  confirmation_sent_at    :datetime
+#  confirmation_token      :string(60)
+#  confirmed_at            :datetime
+#  description             :string(255)
+#  email                   :string           not null
+#  encrypted_password      :string
+#  first_name              :string(80)
+#  last_name               :string(80)
+#  last_sign_in_at         :datetime
+#  locale                  :string           default("en")
+#  mobile                  :string(40)
+#  old_emails              :text             default([]), is an Array
+#  password_salt           :string
+#  phone                   :string(40)
+#  reset_password_sent_at  :datetime
+#  reset_password_token    :string
+#  reseted_password_at     :datetime
+#  rol                     :string(50)
+#  sign_in_count           :integer          default(0)
+#  website                 :string(200)
+#  created_at              :datetime
+#  updated_at              :datetime
+#
+
 require 'spec_helper'
 
 describe User do

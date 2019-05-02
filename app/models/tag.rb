@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: tags
+#
+#  id         :integer          not null, primary key
+#  bgcolor    :string(10)
+#  name       :string
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_tags_on_name  (name)
+#
+
 # author: Boris Barroso
 # email: boriscyber@gmail.com
 class Tag < ActiveRecord::Base

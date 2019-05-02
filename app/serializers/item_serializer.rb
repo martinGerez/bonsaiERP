@@ -1,3 +1,36 @@
+# == Schema Information
+#
+# Table name: items
+#
+#  id          :integer          not null, primary key
+#  active      :boolean          default(TRUE)
+#  buy_price   :decimal(14, 2)   default(0.0)
+#  code        :string(100)
+#  description :string
+#  for_sale    :boolean          default(TRUE)
+#  name        :string(255)
+#  price       :decimal(14, 2)   default(0.0)
+#  stockable   :boolean          default(TRUE)
+#  tag_ids     :integer          default([]), is an Array
+#  unit_name   :string(255)
+#  unit_symbol :string(20)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  creator_id  :integer
+#  unit_id     :integer
+#  updater_id  :integer
+#
+# Indexes
+#
+#  index_items_on_code        (code)
+#  index_items_on_creator_id  (creator_id)
+#  index_items_on_for_sale    (for_sale)
+#  index_items_on_stockable   (stockable)
+#  index_items_on_tag_ids     (tag_ids) USING gin
+#  index_items_on_unit_id     (unit_id)
+#  index_items_on_updater_id  (updater_id)
+#
+
 class ItemSerializer
   attr_reader :items, :store_id
 

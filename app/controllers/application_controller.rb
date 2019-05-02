@@ -104,7 +104,8 @@ class ApplicationController < ActionController::Base
     end
 
     def current_tenant
-      session[:tenant]
+      'geotec'
+      # session[:tenant]
     end
 
     # Uses the helper methods from devise to made them available in the models

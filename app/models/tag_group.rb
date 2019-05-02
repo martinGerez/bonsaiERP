@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: tag_groups
+#
+#  id         :integer          not null, primary key
+#  bgcolor    :string
+#  name       :string
+#  tag_ids    :integer          default([]), is an Array
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_tag_groups_on_name     (name) UNIQUE
+#  index_tag_groups_on_tag_ids  (tag_ids) USING gin
+#
+
 class TagGroup < ActiveRecord::Base
 
   validates :name, presence: true, length: { within: 3..100 }, uniqueness: true
